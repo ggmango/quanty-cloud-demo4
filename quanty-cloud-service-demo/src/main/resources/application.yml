@@ -1,0 +1,47 @@
+spring:
+  application:
+    # 名字修改为你的moudle名
+    name: quanty-cloud-service-demo
+    #这里修改数据库连接信息，修改url username password 数据库是5.x版本 driver-class-name 去掉中间的cj
+  datasource:
+    druid:
+      url: jdbc:mysql://mysql.zeit.org.cn:1606/geo_standard?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+      username: root
+      password: aBc123456_
+      initial-size: 1
+      min-idle: 1
+      max-active: 20
+      test-on-borrow: true
+      # MySQL 8.x: com.mysql.cj.jdbc.Driver
+      driver-class-name: com.mysql.cj.jdbc.Driver
+
+# 服务器端口修改，因为会有冲突，每个人可以选定一个区间，比如8200,8201 ，8300,8301这种，不要使用80，这种系统常用的端口
+server:
+  port: 8803
+# 修改成你的包名
+mybatis:
+  type-aliases-package: com.quanty.cloud.service.demo
+  mapper-locations: classpath:mapper/*.xml
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  health:
+    redis:
+      enabled: false
+  endpoint:
+    health:
+      show-details: always
+
+#设置控制台打印sql执行语句,改成你的mapper文件路径
+logging:
+  level:
+    com:
+      quanty:
+        cloud:
+          service:
+            demo:
+              mapper:
+                debug

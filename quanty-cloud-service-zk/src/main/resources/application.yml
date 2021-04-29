@@ -1,0 +1,72 @@
+spring:
+  redis:
+    host: localhost
+    jedis:
+      pool:
+        max-active: 8
+  application:
+    name: quanty-cloud-service-zk
+  zipkin:
+    base-url: http://localhost:9411
+    enabled: true
+  datasource:
+    druid:
+      url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+      username: root
+      password: jinwei123
+      initial-size: 1
+      min-idle: 1
+      max-active: 20
+      test-on-borrow: true
+      # MySQL 8.x: com.mysql.cj.jdbc.Driver
+      driver-class-name: com.mysql.cj.jdbc.Driver
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+    sentinel:
+      transport:
+        dashboard: 127.0.0.1:8858
+server:
+  port: 8801
+
+#eureka:
+#  instance:
+#    # 使用 ip 代替实例名
+#    prefer-ip-address: true
+#    # 实例的主机名
+#    hostname: ${spring.cloud.client.ip-address}
+#    # 实例的 ID 规则
+#    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
+#  client:
+#    serviceUrl:
+#      # 注册中心地址
+#      defaultZone: http://${eureka.instance.hostname}:8761/eureka/
+
+mybatis:
+  type-aliases-package: com.quanty.cloud.service.zk
+  mapper-locations: classpath:mapper/*.xml
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  health:
+    redis:
+      enabled: false
+  endpoint:
+    health:
+      show-details: always
+
+#设置控制台打印sql执行语句
+logging:
+  level:
+    com:
+      quanty:
+        cloud:
+          service:
+            zk:
+              mapper:
+                debug

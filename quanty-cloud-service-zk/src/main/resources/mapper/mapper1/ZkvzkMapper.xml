@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.quanty.cloud.service.zk.mapper.mapper1.ZkvzkMapper">
+  <resultMap id="BaseResultMap" type="com.quanty.cloud.service.zk.entity.Zkvzk">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="ZKID" jdbcType="VARCHAR" property="zkid" />
+    <result column="VZK" jdbcType="VARCHAR" property="vzk" />
+    <result column="HZB" jdbcType="DECIMAL" property="hzb" />
+    <result column="ZZB" jdbcType="DECIMAL" property="zzb" />
+    <result column="GCJCBL" jdbcType="DECIMAL" property="gcjcbl" />
+  </resultMap>
+  <update id="updateByZkid">
+        UPDATE zkvzk
+        SET
+        zkvzk.vzk=#{vzk},
+        zkvzk.hzb=#{hzb},
+        zkvzk.zzb=#{zzb},
+        zkvzk.gcjcbl=#{gcjcbl}
+        WHERE
+        zkvzk.zkid =#{zkid}
+
+  </update>
+</mapper>

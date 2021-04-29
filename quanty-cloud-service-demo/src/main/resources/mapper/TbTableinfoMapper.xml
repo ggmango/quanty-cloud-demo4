@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.quanty.cloud.service.demo.mapper.TbTableinfoMapper">
+  <resultMap id="BaseResultMap" type="com.quanty.cloud.service.demo.entity.TbTableinfo">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="TABLE_CODE" jdbcType="VARCHAR" property="tableCode" />
+    <result column="TABLE_NAME" jdbcType="VARCHAR" property="tableName" />
+    <result column="TOP_CATEGORY" jdbcType="VARCHAR" property="topCategory" />
+    <result column="CATEGORY_NAME" jdbcType="VARCHAR" property="categoryName" />
+    <result column="PRIMARY_KEY" jdbcType="VARCHAR" property="primaryKey" />
+    <result column="KEY_CNAME" jdbcType="VARCHAR" property="keyCname" />
+    <result column="TABLE_LEVEL" jdbcType="INTEGER" property="tableLevel" />
+    <result column="PARENT_CODE" jdbcType="VARCHAR" property="parentCode" />
+  </resultMap>
+</mapper>

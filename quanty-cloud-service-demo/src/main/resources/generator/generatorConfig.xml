@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <!-- 引入数据库连接配置 -->
+    <properties resource="jdbc.properties"/>
+
+    <context id="Mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+        <!-- 配置 tk.mybatis 插件 -->
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <!--需要修改value值为你的MyMapper路径 -->
+            <property name="mappers" value="com.quanty.cloud.service.demo.tkmybatismapper.MyMapper"/>
+
+        </plugin>
+
+        <!-- 配置数据库连接 这里的数据库跟application.yml不一样，这里是这个小插件链接数据库生成东西。
+         这里的配置会读取jdbc.properties里面的数据 需要在jdbc.properties文件修改。跟之前类似-->
+        <jdbcConnection
+                driverClass="${driverClassName}"
+                connectionURL="${url}"
+                userId="${username}"
+                password="${password}">
+        </jdbcConnection>
+
+        <!-- 配置实体类存放路径  -->
+        <!--修改为你的-->
+        <javaModelGenerator targetPackage="com.quanty.cloud.service.demo.entity" targetProject="src/main/java"/>
+
+        <!-- 配置 XML 存放路径 -->
+        <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources"/>
+
+        <!-- 配置 DAO 存放路径 修改 -->
+        <!--修改为你的-->
+        <javaClientGenerator
+                targetPackage="com.quanty.cloud.service.demo.mapper"
+                targetProject="src/main/java"
+                type="XMLMAPPER"/>
+
+        <!-- 配置需要指定生成的表，% 代表所有表 -->
+<!--        <table tableName="usr">-->
+<!--            &lt;!&ndash;修改成你需要生成的表名，多张表再加一个table节点&ndash;&gt;-->
+<!--            &lt;!&ndash; mysql 配置  没有自增id 可以删掉这句&ndash;&gt;-->
+<!--            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>-->
+<!--        </table>-->
+
+        <table tableName="tb_tableinfo">
+        </table>
+    </context>
+</generatorConfiguration>

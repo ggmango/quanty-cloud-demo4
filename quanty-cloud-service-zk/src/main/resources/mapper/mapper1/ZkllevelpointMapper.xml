@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.quanty.cloud.service.zk.mapper.mapper1.ZkllevelpointMapper">
+  <resultMap id="BaseResultMap" type="com.quanty.cloud.service.zk.entity.Zkllevelpoint">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="PKIAA" jdbcType="VARCHAR" property="pkiaa" />
+    <result column="DDCDIB" jdbcType="VARCHAR" property="ddcdib" />
+    <result column="DDCDIA" jdbcType="VARCHAR" property="ddcdia" />
+    <result column="TKACCL" jdbcType="DECIMAL" property="tkaccl" />
+    <result column="YSEB" jdbcType="VARCHAR" property="yseb" />
+    <result column="GCKLT" jdbcType="VARCHAR" property="gcklt" />
+    <result column="DCHD" jdbcType="DECIMAL" property="dchd" />
+    <result column="DCBZBM" jdbcType="VARCHAR" property="dcbzbm" />
+    <result column="DCFCMC" jdbcType="VARCHAR" property="dcfcmc" />
+    <result column="DAI" jdbcType="VARCHAR" property="dai" />
+    <result column="JI" jdbcType="VARCHAR" property="ji" />
+    <result column="SHI" jdbcType="VARCHAR" property="shi" />
+    <result column="ZU" jdbcType="VARCHAR" property="zu" />
+    <result column="DUAN" jdbcType="VARCHAR" property="duan" />
+    <result column="XFCH" jdbcType="VARCHAR" property="xfch" />
+    <result column="FZFCH" jdbcType="VARCHAR" property="fzfch" />
+    <result column="YSZLZB" jdbcType="DECIMAL" property="yszlzb" />
+    <result column="TKAJAM" jdbcType="DECIMAL" property="tkajam" />
+    <result column="CQL" jdbcType="DECIMAL" property="cql" />
+    <result column="DSF" jdbcType="VARCHAR" property="dsf" />
+    <result column="DSBF" jdbcType="VARCHAR" property="dsbf" />
+    <result column="YSHFA" jdbcType="VARCHAR" property="yshfa" />
+    <result column="DDCDLR" jdbcType="VARCHAR" property="ddcdlr" />
+    <result column="YSEBZ" jdbcType="VARCHAR" property="ysebz" />
+    <result column="YSD" jdbcType="VARCHAR" property="ysd" />
+    <result column="GZBD" jdbcType="VARCHAR" property="gzbd" />
+    <result column="KCAJA" jdbcType="VARCHAR" property="kcaja" />
+    <result column="QDNGM" jdbcType="VARCHAR" property="qdngm" />
+    <result column="GCJLIJ" jdbcType="DECIMAL" property="gcjlij" />
+    <result column="GGDDIW" jdbcType="VARCHAR" property="ggddiw" />
+    <result column="LD" jdbcType="VARCHAR" property="ld" />
+    <result column="MYD" jdbcType="VARCHAR" property="myd" />
+    <result column="HSX" jdbcType="VARCHAR" property="hsx" />
+    <result column="FSX" jdbcType="VARCHAR" property="fsx" />
+    <result column="STYHDJ" jdbcType="VARCHAR" property="styhdj" />
+    <result column="HSCDM" jdbcType="VARCHAR" property="hscdm" />
+    <result column="DZCY" jdbcType="VARCHAR" property="dzcy" />
+    <result column="QYLB" jdbcType="VARCHAR" property="qylb" />
+    <result column="QYSL" jdbcType="VARCHAR" property="qysl" />
+    <result column="YPBH" jdbcType="VARCHAR" property="ypbh" />
+    <result column="CSLB" jdbcType="VARCHAR" property="cslb" />
+    <result column="CSSL" jdbcType="VARCHAR" property="cssl" />
+    <result column="LSH" jdbcType="INTEGER" property="lsh" />
+    <result column="CDBG" jdbcType="VARCHAR" property="cdbg" />
+    <result column="DZDYGBHDM" jdbcType="VARCHAR" property="dzdygbhdm" />
+    <result column="KTYID" jdbcType="VARCHAR" property="ktyid" />
+    <result column="TESTXH" jdbcType="VARCHAR" property="testxh" />
+    <result column="HZB" jdbcType="DECIMAL" property="hzb" />
+    <result column="ZZB" jdbcType="DECIMAL" property="zzb" />
+    <result column="YWBH" jdbcType="VARCHAR" property="ywbh" />
+    <result column="YSHB" jdbcType="LONGVARCHAR" property="yshb" />
+    <result column="CLGZ" jdbcType="LONGVARCHAR" property="clgz" />
+    <result column="BZ" jdbcType="LONGVARCHAR" property="bz" />
+    <result column="DZMS" jdbcType="LONGVARCHAR" property="dzms" />
+    <result column="YSC" jdbcType="LONGVARCHAR" property="ysc" />
+    <result column="KWBGAX" jdbcType="LONGVARCHAR" property="kwbgax" />
+    <result column="GCCCA" jdbcType="LONGVARCHAR" property="gccca" />
+    <result column="GSAB" jdbcType="LONGVARCHAR" property="gsab" />
+    <result column="PKICGA" jdbcType="LONGVARCHAR" property="pkicga" />
+    <result column="YSLX" jdbcType="LONGVARCHAR" property="yslx" />
+    <result column="ZYKWLX" jdbcType="LONGVARCHAR" property="zykwlx" />
+    <result column="ZKSW" jdbcType="LONGVARCHAR" property="zksw" />
+  </resultMap>
+  <update id="updateZkPoint">
+        UPDATE
+          zkllevelpoint
+        SET
+        zkllevelpoint.ddcdia=#{ddcdia},
+        zkllevelpoint.tkaccl=#{tkaccl},
+        zkllevelpoint.yseb=#{yseb},
+        zkllevelpoint.gcklt=#{gcklt},
+        zkllevelpoint.dchd=#{dchd},
+        zkllevelpoint.dcbzbm=#{dcbzbm},
+        zkllevelpoint.dcfcmc=#{dcfcmc},
+        zkllevelpoint.dai=#{dai},
+        zkllevelpoint.ji=#{ji},
+        zkllevelpoint.shi=#{shi},
+        zkllevelpoint.zu=#{zu},
+        zkllevelpoint.duan=#{duan},
+        zkllevelpoint.xfch=#{xfch},
+        zkllevelpoint.fzfch=#{fzfch},
+        zkllevelpoint.yszlzb=#{yszlzb},
+        zkllevelpoint.tkajam=#{tkajam},
+        zkllevelpoint.cql=#{cql},
+        zkllevelpoint.dsf=#{dsf},
+        zkllevelpoint.dsbf=#{dsbf},
+        zkllevelpoint.yshfa=#{yshfa},
+        zkllevelpoint.ddcdlr=#{ddcdlr},
+        zkllevelpoint.ysebz=#{ysebz},
+        zkllevelpoint.ysd=#{ysd},
+        zkllevelpoint.gzbd=#{gzbd},
+        zkllevelpoint.kcaja=#{kcaja},
+        zkllevelpoint.qdngm=#{qdngm},
+        zkllevelpoint.gcjlij=#{gcjlij},
+        zkllevelpoint.ggddiw=#{ggddiw},
+        zkllevelpoint.ld=#{ld},
+        zkllevelpoint.myd=#{myd},
+        zkllevelpoint.hsx=#{hsx},
+        zkllevelpoint.fsx=#{fsx},
+        zkllevelpoint.styhdj=#{styhdj},
+        zkllevelpoint.hscdm=#{hscdm},
+        zkllevelpoint.dzcy=#{dzcy},
+        zkllevelpoint.qylb=#{qylb},
+        zkllevelpoint.qysl=#{qysl},
+        zkllevelpoint.ypbh=#{ypbh},
+        zkllevelpoint.cslb=#{cslb},
+        zkllevelpoint.cssl=#{cssl},
+        zkllevelpoint.lsh=#{lsh},
+        zkllevelpoint.cdbg=#{cdbg},
+        zkllevelpoint.dzdygbhdm=#{dzdygbhdm},
+        zkllevelpoint.ktyid=#{ktyid},
+        zkllevelpoint.testxh=#{testxh},
+        zkllevelpoint.hzb=#{hzb},
+        zkllevelpoint.zzb=#{zzb},
+        zkllevelpoint.ywbh=#{ywbh},
+        zkllevelpoint.yshb=#{yshb},
+        zkllevelpoint.clgz=#{clgz},
+        zkllevelpoint.bz=#{bz},
+        zkllevelpoint.dzms=#{dzms},
+        zkllevelpoint.ysc=#{ysc},
+        zkllevelpoint.kwbgax=#{kwbgax},
+        zkllevelpoint.gccca=#{gccca},
+        zkllevelpoint.gsab=#{gsab},
+        zkllevelpoint.pkicga=#{pkicga},
+        zkllevelpoint.yslx=#{yslx},
+        zkllevelpoint.zykwlx=#{zykwlx},
+        zkllevelpoint.zksw=#{zksw}
+         WHERE
+         zkllevelpoint.pkiaa=#{pkiaa} AND zkllevelpoint.ddcdib=#{ddcdib}
+
+    </update>
+    <select id="selectAllOrderBypkiaaAndDdcdibAsc" resultMap="BaseResultMap" >
+        SELECT  * FROM zkllevelpoint
+        ORDER BY  zkllevelpoint.pkiaa,zkllevelpoint.ddcdib +0
+    </select>
+</mapper>
