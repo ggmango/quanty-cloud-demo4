@@ -10,22 +10,22 @@ import org.springframework.web.bind.annotation.*;
  * @version 1.0
  * @date 2021/4/12 9:36
  */
-@RestController
-@RequestMapping("TbTableinfo")
-@CrossOrigin
-public class TbTableinfoController {
-
-    @Autowired
-    private TbTableinfoService tbTableinfoService;
-
-    /**
-     * 对数据库表进行分类
-     * @param
-     * @return
-     */
-    @GetMapping("sortTable")
-    public BaseResult sortTable(){
-        return tbTableinfoService.sort();
-    }
-
-}
+//@RestController
+//@RequestMapping("TbTableinfo")
+//@CrossOrigin
+//public class TbTableinfoController {
+//
+//    @Autowired
+//    private TbTableinfoService tbTableinfoService;
+//
+//    /**
+//     * 对数据库表进行分类
+//     * @param
+//     * @return
+//     */
+//    @GetMapping("sortTable")
+//    public BaseResult sortTable(){
+//        return tbTableinfoService.sort();
+//    }
+//
+//}

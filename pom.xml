@@ -110,21 +110,21 @@
             <!-- Spring Boot Admin End -->
 
             <!-- ZipKin Begin -->
-            <dependency>
-                <groupId>io.zipkin.java</groupId>
-                <artifactId>zipkin</artifactId>
-                <version>${zipkin.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.zipkin.java</groupId>
-                <artifactId>zipkin-server</artifactId>
-                <version>${zipkin.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.zipkin.java</groupId>
-                <artifactId>zipkin-autoconfigure-ui</artifactId>
-                <version>${zipkin.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>io.zipkin.java</groupId>-->
+<!--                <artifactId>zipkin</artifactId>-->
+<!--                <version>${zipkin.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>io.zipkin.java</groupId>-->
+<!--                <artifactId>zipkin-server</artifactId>-->
+<!--                <version>${zipkin.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>io.zipkin.java</groupId>-->
+<!--                <artifactId>zipkin-autoconfigure-ui</artifactId>-->
+<!--                <version>${zipkin.version}</version>-->
+<!--            </dependency>-->
             <!-- ZipKin End -->
 
             <!-- Environment Begin -->
@@ -139,11 +139,11 @@
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
             </dependency>
-            <dependency>
-                <groupId>net.sourceforge.nekohtml</groupId>
-                <artifactId>nekohtml</artifactId>
-                <version>${nekohtml.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>net.sourceforge.nekohtml</groupId>-->
+<!--                <artifactId>nekohtml</artifactId>-->
+<!--                <version>${nekohtml.version}</version>-->
+<!--            </dependency>-->
             <!-- Environment End -->
 
             <!-- Swagger2 Begin -->
@@ -290,18 +290,18 @@
         <pluginManagement>
             <plugins>
                 <!-- Java Document Generate -->
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-javadoc-plugin</artifactId>
-                    <executions>
-                        <execution>
-                            <phase>prepare-package</phase>
-                            <goals>
-                                <goal>jar</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                </plugin>
+<!--                <plugin>-->
+<!--                    <groupId>org.apache.maven.plugins</groupId>-->
+<!--                    <artifactId>maven-javadoc-plugin</artifactId>-->
+<!--                    <executions>-->
+<!--                        <execution>-->
+<!--                            <phase>prepare-package</phase>-->
+<!--                            <goals>-->
+<!--                                <goal>jar</goal>-->
+<!--                            </goals>-->
+<!--                        </execution>-->
+<!--                    </executions>-->
+<!--                </plugin>-->
 
                 <!-- YUI Compressor (CSS/JS压缩) -->
                 <plugin>

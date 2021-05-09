@@ -5,10 +5,7 @@ import org.apache.commons.dbutils.DbUtils;
 
 import javax.sql.DataSource;
 import java.io.InputStream;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.Properties;
 
 /**
@@ -26,9 +23,13 @@ public class JDBCUtils {
         try {
             Properties pros = new Properties();
 
-            InputStream is = ClassLoader.getSystemClassLoader().getResourceAsStream("jdbc.properties");
+//            InputStream is = ClassLoader.getSystemClassLoader().getResourceAsStream("jdbc.properties");
+//            pros.load(is);
 
-            pros.load(is);
+            pros.setProperty("driverClassName", "com.mysql.cj.jdbc.Driver");
+            pros.setProperty("url", "jdbc:mysql://mysql.zeit.org.cn:1606/geo_standard?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC");
+            pros.setProperty("username", "root");
+            pros.setProperty("password", "aBc123456_");
 
             source = DruidDataSourceFactory.createDataSource(pros);
         } catch (Exception e) {
