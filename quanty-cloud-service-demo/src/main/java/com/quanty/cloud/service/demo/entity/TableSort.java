@@ -1,32 +1,67 @@
 package com.quanty.cloud.service.demo.entity;
 
-
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import lombok.Data;
-
-import java.io.Serializable;
+import org.springframework.stereotype.Component;
 
 /**
  * @author Abin
  * @version 1.0
  * @date 2021/4/22 11:40
  */
-@ApiModel(value = "查询对象", description = "表分类查询对象封装")
-@Data
-public class TableSort implements Serializable {
-    private static final long serialVersionUID = 1L;
-
-    @ApiModelProperty(example = "geo_standard.tb_tableinfo")
+public class TableSort {
     private String tableName;
-
-    @ApiModelProperty(example = "TABLE_NAME")
     private String columnTableName;
-
-    @ApiModelProperty(example = "TABLE_CODE")
     private String columnTableCode;
-
-    @ApiModelProperty(example = "CATEGORY_NAME")
     private String columnSortName;
 
+    public TableSort() {
+    }
+
+    public TableSort(String tableName, String columnTableName, String columnTableCode, String columnSortName) {
+        this.tableName = tableName;
+        this.columnTableName = columnTableName;
+        this.columnTableCode = columnTableCode;
+        this.columnSortName = columnSortName;
+    }
+
+    public String getTableName() {
+        return tableName;
+    }
+
+    public void setTableName(String tableName) {
+        this.tableName = tableName;
+    }
+
+    public String getColumnTableName() {
+        return columnTableName;
+    }
+
+    public void setColumnTableName(String columnTableName) {
+        this.columnTableName = columnTableName;
+    }
+
+    public String getColumnTableCode() {
+        return columnTableCode;
+    }
+
+    public void setColumnTableCode(String columnTableCode) {
+        this.columnTableCode = columnTableCode;
+    }
+
+    public String getColumnSortName() {
+        return columnSortName;
+    }
+
+    public void setColumnSortName(String columnSortName) {
+        this.columnSortName = columnSortName;
+    }
+
+    @Override
+    public String toString() {
+        return "TableSort{" +
+                "tableName='" + tableName + '\'' +
+                ", columnTableName='" + columnTableName + '\'' +
+                ", columnTableCode='" + columnTableCode + '\'' +
+                ", columnSortName='" + columnSortName + '\'' +
+                '}';
+    }
 }

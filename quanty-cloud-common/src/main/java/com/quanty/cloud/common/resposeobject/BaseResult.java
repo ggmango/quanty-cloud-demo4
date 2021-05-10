@@ -1,7 +1,9 @@
 package com.quanty.cloud.common.resposeobject;
+import com.sun.org.glassfish.gmbal.NameValue;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * 通用返回结果结果对象类型

@@ -1,5 +1,6 @@
 package com.quanty.cloud.service.demo;
 
+import com.quanty.cloud.service.demo.entity.TableSort;
 import com.quanty.cloud.service.demo.service.TableSortService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -23,8 +24,8 @@ public class TableSortTest {
 
     @Test
     public void test() {
-//        TableSort tableSort = new TableSort("geo_standard.tb_tableinfo","TABLE_NAME","TABLE_CODE","CATEGORY_NAME");
-//        System.out.println(tableSortService.sortTable(tableSort));
+        TableSort tableSort = new TableSort("geo_standard.tb_tableinfo","TABLE_NAME","TABLE_CODE","CATEGORY_NAME");
+        System.out.println(tableSortService.sortTable(tableSort));
     }
 
 }
